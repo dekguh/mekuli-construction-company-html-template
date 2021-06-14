@@ -1,0 +1,59 @@
+.preloader-wrapper {
+    position: fixed;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+
+    .preloader-block-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        max-width: 100%;
+        background-color: $color-orange-primary;
+    }
+
+    .preloader-block-2 {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        right: 0;
+        height: 50%;
+        width: 100%;
+        max-width: 100%;
+        background-color: $color-orange-primary;
+    }
+
+    .preloader-inner {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+    }
+
+    .preloader-loading {
+        position: relative;
+        text-align: center;
+
+        .loading {
+            font-size: 45px;
+            color: $color-white;
+            animation: loading-text 2s infinite linear;
+        }
+    }
+}
+
+@keyframes loading-text {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

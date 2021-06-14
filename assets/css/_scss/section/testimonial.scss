@@ -1,0 +1,29 @@
+.testimonial-wrapper {
+    .block-testimonial-wrapper {
+        .block-testimonial {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .testimonial-quote {
+            margin-right: 8px;
+            .icon {
+                font-size: 27px;
+                color: $color-orange-primary;
+                opacity: .5;
+            }
+        }
+
+        .testimonial-detail {
+            text-align: center;
+
+            .title {
+                margin-bottom: 8px;
+            }
+
+            .position {
+                color: $color-orange-primary;
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.counter-wrapper {
+    .counter-content {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .block-counter {
+        flex: 1;
+        align-self: stretch;
+        background-color: $color-gray-primary;
+        padding: 50px 30px;
+        border-right: 1px solid $color-gray-secondary;
+        text-align: center;
+        transition: .6s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-orange-primary;
+            color: $color-white;
+
+            .number {
+                color: $color-white;
+            }
+        }
+
+        &:first-child {
+            border-right: none;
+        }
+
+        &:last-child {
+            border-right: none;
+        }
+
+        &.orange {
+            position: relative;
+            background-color: $color-orange-primary;
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: -20px;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 0;
+                width: 0;
+                border-top: 20px solid transparent;
+                border-bottom: 20px solid transparent;
+                border-left: 20px solid $color-orange-primary;
+            }
+
+            .title {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                color: $color-white;
+                margin-bottom: 0;
+            }
+        }
+
+        .number {
+            display: block;
+            font-size: 35px;
+            font-weight: 600;
+            color: $color-orange-primary;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .counter-wrapper {
+        .counter-content {
+            flex-flow: column nowrap;
+        }
+
+        .block-counter {
+            border-right: none;
+            border-bottom: 1px solid $color-gray-secondary;
+
+            &:first-child {
+                border-bottom: none;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &.orange {
+                position: relative;
+                background-color: $color-orange-primary;
+
+                &::after {
+                    right: unset;
+                    top: unset;
+                    bottom: -20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 0;
+                    width: 0;
+                    border-top: 20px solid $color-orange-primary;
+                    border-bottom: none;
+                    border-left: 20px solid transparent;
+                    border-right: 20px solid transparent;
+                }
+            }
+        }
+    }
+}

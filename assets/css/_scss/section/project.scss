@@ -1,0 +1,214 @@
+.project-wrapper {
+    .block-project-wrapper {
+        .block-project {
+            @include bg-image;
+            height: 100%;
+        }
+
+        .block-more-project {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-gray-primary;
+            text-align: center;
+            height: 100%;
+            padding: 30px;
+        }
+
+        &.home-small {
+            height: 300px;
+        }
+
+        &.home-lg {
+            height: 100%;
+        }
+
+        &.project-page {
+            height: 450px;
+        }
+
+        .project-see {
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: flex;
+            flex-flow: nowrap;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 50px;
+            color: $color-white;
+            background-color: $color-orange-primary;
+            font-size: 21px;
+
+            &:hover {
+                background-color: $color-black-primary;
+            }
+        }
+
+        .project-header {
+            position: absolute;
+            bottom: 0;
+            padding: 30px;
+        }
+
+        .project-title {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            margin-bottom: 8px;
+
+            .border-title {
+                width: 34px;
+                height: 4px;
+                background-color: $color-orange-primary;
+                margin-right: 8px;
+            }
+
+            .title {
+                color: $color-white;
+                margin-bottom: 0;
+                word-wrap: break-word;
+                word-break: break-all;
+            }
+        }
+
+        .project-link {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+
+            .border-link {
+                flex: 0 0 auto;
+                @include border-h4;
+                width: 44px;
+                margin-right: 8px;
+            }
+
+            .link {
+                flex: 1 0 auto;
+                margin-bottom: 0;
+                text-decoration: none;
+                color: $color-white;
+
+                &:hover {
+                    color: $color-gray-primary;
+                }
+            }
+        }
+    }
+}
+
+.project-detail-wrapper {
+    .project-info-image {
+        @include bg-image;
+        height: 300px;
+    }
+
+    .project-info-see {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        flex-flow: nowrap;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 50px;
+        color: $color-white;
+        background-color: $color-orange-primary;
+        font-size: 21px;
+
+        &:hover {
+            background-color: $color-black-primary;
+        }
+    }
+
+    .project-info-title {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .border-title {
+            flex: 0 0 auto;
+            width: 34px;
+            height: 4px;
+            background-color: $color-orange-primary;
+            margin-right: 8px;
+        }
+
+        .title {
+            flex: 1 1 auto;
+            margin-bottom: 0;
+
+            .orange {
+                color: $color-orange-primary;
+            }
+        }
+    }
+
+    .project-info-body {
+        margin-bottom: 30px;
+
+        .description {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+#projectImageCarousel {
+    &.owl-carousel {
+        .owl-nav {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin-top: 0;
+
+            button.owl-prev {
+                margin: 0;
+                padding: 20px 25px !important;
+
+                &:hover {
+                    background: $color-black-primary !important;
+                    color: $color-white;
+                    border-color: $color-black-primary;
+                }
+            }
+
+            button.owl-next {
+                margin: 0;
+                padding: 20px 25px !important;
+
+                &:hover {
+                    background: $color-black-primary !important;
+                    color: $color-white;
+                    border-color: $color-black-primary;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .project-wrapper {
+        .block-project-wrapper {
+            &.home-lg {
+                height: 300px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .project-detail-wrapper {
+        .project-info-title {
+            .title {
+                font-size: 27px;
+            }
+        }
+    }
+}

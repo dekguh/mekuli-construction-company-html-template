@@ -1,0 +1,89 @@
+.team-wrapper {
+    .block-team-wrapper {
+        &:hover {
+            .team-social {
+                left: 0;
+            }
+        }
+
+        .block-team {
+            @include bg-image;
+            height: 450px;
+        }
+
+        .team-detail {
+            position: relative;
+            z-index: 9;
+            overflow: hidden;
+            margin: -40px 20px 2px 20px;
+            padding: 30px;
+            background-color: $color-white;
+        }
+
+        .team-social {
+            position: absolute;
+            left: -100%;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+            background-color: $color-orange-primary;
+            padding: 30px;
+            transition: 1.5s;
+
+            .list-social {
+                .item-social {
+                    a {
+                        color: $color-white;
+
+                        &:hover {
+                            color: $color-gray-primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        .team-title {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            margin-bottom: 8px;
+
+            .border-title {
+                flex: 0 0 auto;
+                @include border-h4;
+                width: 34px;
+                margin-right: 8px;
+            }
+
+            .title {
+                flex: 1 1 auto;
+                margin-bottom: 0;
+                word-break: break-all;
+                word-wrap: break-word;
+            }
+        }
+
+        .team-subtitle {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            margin-bottom: 8px;
+
+            .border-subtitle {
+                flex: 0 0 auto;
+                @include border-h4;
+                width: 44px;
+                margin-right: 8px;
+            }
+
+            .subtitle {
+                flex: 1 1 auto;
+                margin-bottom: 0;
+                word-break: break-all;
+                word-wrap: break-word;
+            }
+        }
+    }
+}

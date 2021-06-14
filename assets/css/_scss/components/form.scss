@@ -1,0 +1,13 @@
+.form-control {
+    padding: 15px 20px;
+    height: auto;
+    border-radius: 0;
+    border-color: $color-gray-secondary;
+    transition: .6s;
+    color: $color-black-secondary;
+
+    &:focus {
+        box-shadow: none;
+        border-color: $color-gray-primary;
+    }
+}

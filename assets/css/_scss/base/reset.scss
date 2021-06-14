@@ -1,0 +1,81 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    color: $color-body;
+    font-size: $size-body;
+    font-family: $font-roboto;
+}
+
+p {
+    line-height: 170%;
+    margin-bottom: 15px;
+}
+
+%heading-set {
+    color: $color-heading;
+    line-height: 120%;
+    font-family: $font-opensans;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h1 {
+    @extend %heading-set;
+    font-size: $size-h1;
+}
+
+h2 {
+    @extend %heading-set;
+    font-size: $size-h2;
+}
+
+h3 {
+    @extend %heading-set;
+    font-size: $size-h3;
+}
+
+h4 {
+    @extend %heading-set;
+    font-size: $size-h4;
+}
+
+h5 {
+    @extend %heading-set;
+    font-size: $size-h5;
+}
+
+h6 {
+    @extend %heading-set;
+    font-size: $size-h6;
+}
+
+a {
+    color: $color-orange-primary;
+    transition: .6s;
+
+    &:hover {
+        color: $color-orange-secondary;
+    }
+}
+
+button {
+    &:focus {
+        outline: none;
+    }
+}
+
+input {
+    &:focus {
+        outline: none;
+    }
+}
+
+.card {
+    border-radius: 0;
+
+    .card-body {
+        position: relative;
+    }
+}

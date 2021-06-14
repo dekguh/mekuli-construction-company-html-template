@@ -1,0 +1,55 @@
+.btn {
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 0;
+    padding: 15px 25px;
+    font-size: 16px;
+    text-align: center;
+    color: $color-white;
+
+    &:hover {
+        border-color: transparent;
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    .icon {
+        margin-right: 8px;
+    }
+
+    &.btn-primary {
+        background-color: $color-orange-primary;
+        transition: .6s;
+
+        &:hover {
+            background-color: $color-black-primary;
+        }
+    }
+
+    &.btn-primary-outline {
+        background-color: transparent;
+        border-color: $color-orange-primary;
+        color: $color-orange-primary;
+        transition: .6s;
+
+        &:hover {
+            background-color: $color-orange-primary;
+            border-color: $color-orange-secondary;
+            color: $color-white;
+        }
+    }
+
+    &.btn-white-outline {
+        background-color: transparent;
+        border-color: $color-white;
+        color: $color-white;
+        transition: .6s;
+
+        &:hover {
+            border-color: $color-gray-primary;
+            color: $color-gray-primary;
+        }
+    }
+}
